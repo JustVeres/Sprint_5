@@ -9,4 +9,3 @@ class TestCreatingUnauthorizedUser:
 
         # Проверка: открыто модальное окно "Чтобы разместить объявление, авторизуйтесь":
         assert find(*CMU.creating_modal_unauthorized_text).text == "Чтобы разместить объявление, авторизуйтесь"
-        driver.quit()

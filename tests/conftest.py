@@ -2,9 +2,11 @@ import pytest
 import random
 from selenium import webdriver
 
-@pytest.fixture # Фикстура для запуска
+@pytest.fixture # Фикстура для запуска и закрытия браузера
 def driver():
-    return webdriver.Chrome()
+    driver_instance = webdriver.Chrome()
+    yield driver_instance
+    driver_instance.quit()
 
 @pytest.fixture # Фикстура для driver.find_element
 def find(driver):

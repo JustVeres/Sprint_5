@@ -27,4 +27,3 @@ class TestRegistrationOfAnExistingUser:
 
         assert find(*RNAM.error_email_message).text == "Ошибка" # Проверка: отображение "Ошибка" под полем email
         assert len(driver.find_elements(*RNAM.error_marked_red_field)) == 3 # Проверка: отображается 3 красных выделения поля
-        driver.quit()

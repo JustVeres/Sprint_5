@@ -31,4 +31,3 @@ class TestUserLogout:
         assert len(user_name_not_found) == 0 # Проверка: Имя "User." не отображается
 
         assert find(*MW.login_registration_button).text == 'Вход и регистрация' # Проверка: отображается кнопка «Вход и регистрация»
-        driver.quit()

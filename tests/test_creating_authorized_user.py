@@ -48,4 +48,3 @@ class TestCreatingAuthorizedUser:
         wait(driver, 3).until(EC.visibility_of_element_located(MP.my_ads))
 
         assert find(*MP.my_ads).text == name_ad # Проверка: в блоке «Мои объявления» отображается созданное объявление
-        driver.quit()

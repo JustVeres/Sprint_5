@@ -30,4 +30,3 @@ class TestUserRegistration:
         assert driver.current_url == website # Проверка: произошёл переход на главную страницу
         assert find(*MW.avatar_img).get_attribute("class") == "circleSmall" # Проверка: отображается аватар в правом верхнем углу меню
         assert find(*MW.user_name).text == "User." # Проверка: отображается имя User.
-        driver.quit()
